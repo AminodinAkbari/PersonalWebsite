@@ -8,6 +8,8 @@ class AboutMe(models.Model):
 	name   = models.CharField(max_length = 200)
 	titles = models.TextField()
 	text   = RichTextField()
+	profile_IMG = models.ImageField(upload_to = 'your_pictures/' , blank = True , null = True)
+	about_IMG = models.ImageField(upload_to = 'your_pictures/' , blank = True , null = True)
 	personal_informations = models.TextField()
 	CV = models.URLField(blank = True , null=True)
 	active = models.BooleanField()

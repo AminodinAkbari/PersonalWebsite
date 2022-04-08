@@ -36,6 +36,9 @@ class Index(FormView):
 
 	
 	def get_success_url(self):
+		form = ContactForm(self.request.POST or None)
+		form.save()
+		print(form)
 		messages.success(self.request, "I Got You'r Message ☻")
 		return reverse_lazy('Home')
 
